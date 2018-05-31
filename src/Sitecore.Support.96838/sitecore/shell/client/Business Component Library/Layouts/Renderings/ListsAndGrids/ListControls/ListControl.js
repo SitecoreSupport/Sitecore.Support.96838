@@ -474,7 +474,7 @@ define(["sitecore", "userProfile", "Scrollbar", "EndlessPageScroll", "ResizableC
         appendLanguageParameter: function (item) {
             if (item.$icon && item.$icon.indexOf(".ashx") > 0) {
                 item.$icon += "&la=" + this.model.get("contentLanguage");
-                item.$mediaurl += "&la=" + this.model.get("contentLanguage");
+                item.$mediaurl += "&la=" + item.$language;
             }
         },
         refresh: function () {
